@@ -1,0 +1,8 @@
+{
+  "name": "Tether USDT",
+  "symbol": "USDT",
+  "decimals": 18,
+  "chainId": 11155111,
+  "address": "0xb050D0bAEa3DE6054BcF6Cc2DA31D4D8C9803B1D",
+  "logoURI": "https://raw.githubusercontent.com/Jaydip257/flashusdt-assets/main/logo.png"
+}
