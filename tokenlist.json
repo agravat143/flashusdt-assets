@@ -1,19 +1,19 @@
 {
-  "name": "FlashUSDT Token List",
-  "timestamp": "2025-06-15T00:00:00+00:00",
-  "version": {
-    "major": 1,
-    "minor": 0,
-    "patch": 0
-  },
-  "tokens": [
-    {
-      "chainId": 11155111,
-      "address": "0xb050D0bAEa3DE6054BcF6Cc2DA31D4D8C9803B1D",
-      "name": "Tether USDT",
-      "symbol": "USDT",
-      "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/agravat143/flashusdt-assets/main/logo.png"
-    }
-  ]
+    "name": "FlashUSDT Token List",
+    "timestamp": "2025-06-15T00:00:00Z",
+    "version": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+    },
+    "tokens": [
+        {
+            "name": "Tether USD",
+            "symbol": "USDT",
+            "decimals": 18,
+            "chainId": 11155111,
+            "address": "0x3c4141aef323b82a9dddc0e9bbc5f8d0f472c41d7a43a2e9a5d95898b253a058",
+            "logoURI": "./logo.png"
+        }
+    ]
 }

