@@ -12,7 +12,7 @@
             "symbol": "USDT",
             "decimals": 18,
             "chainId": 11155111,
-            "address": "0x3c4141aef323b82a9dddc0e9bbc5f8d0f472c41d7a43a2e9a5d95898b253a058",
+            "address": "0xeceb0eb19f367bfc9fc60b74a00d08143baadfddcdd66913f3511f2169574acd",
             "logoURI": "./logo.png"
         }
     ]
