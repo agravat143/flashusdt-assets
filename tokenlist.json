@@ -9,11 +9,11 @@
   "tokens": [
     {
       "chainId": 97,
-      "address": "0xYourContractAddress",
+      "address": "0x8CCe905541e2aD21cce02EabD60A4313BD42D5F0",
       "name": "Tether USD",
       "symbol": "USDT",
       "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/<yourname>/flashusdt-assets/main/logo.png"
+      "logoURI": "https://raw.githubusercontent.com/agravat143/flashusdt-assets/main/logo.png"
     }
   ]
 }
