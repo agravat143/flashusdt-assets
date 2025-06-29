@@ -3,6 +3,6 @@
   "symbol": "USDT",
   "type": "ERC20",
   "decimals": 18,
-  "chainId": 97,
-  "address": "0xYourContractAddress"
+  "chainId": 11155111,
+  "address": "0x0Bc3608a2cF4CCAA2977F7b0c98Ef3D558eb5E7A"
 }
