@@ -1,8 +1,8 @@
 {
-    "name": "Tether USD",
-    "symbol": "USDT",
-    "decimals": 18,
-    "chainId": 11155111,
-    "address": "0xeceb0eb19f367bfc9fc60b74a00d08143baadfddcdd66913f3511f2169574acd",
-    "logoURI": "./logo.png"
+  "name": "Tether USD",
+  "symbol": "USDT",
+  "type": "ERC20",
+  "decimals": 18,
+  "chainId": 97,
+  "address": "0xYourContractAddress"
 }
